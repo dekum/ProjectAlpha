@@ -1,5 +1,5 @@
 # ProjectAlpha
-/**
+
  * Philemon Petit-Frere
  * 9/27/2018
  * COP 3003 - OOP
@@ -8,8 +8,7 @@
  * Purpose of Project: design a template in Java for creating and recording all future
  * production line items. Also also allow easy modification to handle different products
  *Sources for help: Stackexchange, Garrett Graber, github.com
- *
- */
+ 
 <h4>Goal:</h4>
 <p>Create a production plant for any type of product ranging from a simple packaging system to a variety of electronic devices.
 create a production line for multimedia devices which include music and movie players.
@@ -39,27 +38,29 @@ Visual | VI
   
   <h4>Step 3</h4>
   <p>Create a abstract class called Product which will implement the methods created earlier. It will add {} and code to the methods defined in Item interface. These fields are also created
-  
-  Date manufacturedOn; 
-  String name;
-  final String MANAFACTURER = "OracleProduction";
+  <br>
+  Date manufacturedOn;<br> 
+  String name;<br>
+  final String MANAFACTURER = "OracleProduction";<br>
 
   static int currentProductionNumber = 0;
 
 
 <h3> Summary </h3>
-There exists a Main class, a Widget class, Product class, and Item interface.
-Main Class is the driver class, which also contains widget
-Widget class, extends Product and will intialize it when in Main method
-Product class is an abstract class that implements Item's methods, and provides methods for Widget
-Item interface creates classes for Product to implement.
+*There exists a Main class, a Widget class, Product class, and Item interface.
+*Main Class is the driver class, which also contains widget
+*Widget class, extends Product and will intialize it when in Main method
+*Product class is an abstract class that implements Item's methods, and provides methods for Widget
+*Item interface creates classes for Product to implement.
 
 When user runs Main(), it will display:
-Manufacturer
-Serial Number
-Date created
-Name of product
-and then it will display ItemType's fields
+*Manufacturer
+*Serial Number
+*Date created
+*Name of product
+and then it will display ItemType's fields.
+
+Tested on Windows 10, IntelJ IDEA 32-bit on 9/29/18.
 
 </p>
 
