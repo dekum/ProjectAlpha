@@ -18,7 +18,7 @@ public abstract class Product implements Item {
   //String manufacturer;
   Date manufacturedOn; //manufacturedOn is a object of Date
   String name;//Name of the Product, to be initialized in constructor
-  final String MANAFACTURER = "OracleProduction"; //name of manufacturer
+  final String MANAFACTURER = item.manafacturer; //name of manufacturer
 
   static int currentProductionNumber = 0; //This is static so it can constantly be incremented.
 
