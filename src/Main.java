@@ -23,7 +23,7 @@ public class Main {
     Widget w2 = new Widget("Widget 2");//Create Widget called Widget2
     System.out.println(w2.toString()); //Use Product's toString method to print information.
 
-    for (Item.ItemType it : Item.ItemType.values()) {
+    for (ItemType it : ItemType.values()) {
       //For loop ends when, ItemType.values reaches the end, as this case 4 times.
       System.out.println(it + " " + it.code); //Print type and code of ItemType Enum
     }
