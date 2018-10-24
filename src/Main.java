@@ -18,15 +18,18 @@ public class Main {
    */
   public static void main(String args[]) {
 
-    Widget w1 = new Widget("Widget 1");//Create Widget called Widget1
-    System.out.println(w1.toString());//Use Product's toString method to print information.
-    Widget w2 = new Widget("Widget 2");//Create Widget called Widget2
-    System.out.println(w2.toString()); //Use Product's toString method to print information.
+//    Widget w1 = new Widget("Widget 1");//Create Widget called Widget1
+//    System.out.println(w1.toString());//Use Product's toString method to print information.
+//    Widget w2 = new Widget("Widget 2");//Create Widget called Widget2
+//    System.out.println(w2.toString()); //Use Product's toString method to print information.
+//
+//    for (ItemType it : ItemType.values()) {
+//      //For loop ends when, ItemType.values reaches the end, as this case 4 times.
+//      System.out.println(it + " " + it.code); //Print type and code of ItemType Enum
+//    }
+//
 
-    for (ItemType it : ItemType.values()) {
-      //For loop ends when, ItemType.values reaches the end, as this case 4 times.
-      System.out.println(it + " " + it.code); //Print type and code of ItemType Enum
-    }
+    MoviePlayerDriver.testMoviePlayer();
     //End of program
 
   }

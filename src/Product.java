@@ -10,15 +10,16 @@
  */
 
 import java.util.Date;
+import java.util.List;
 
 public abstract class Product implements Item {
   //Abstract classes cannot be implemented, but are useful for classes that have similar methods to extend from.
   //Product will implement the basic functionality that all items on a production line should have.
   static int serialNumber;
-  //String manufacturer;
+  //String MANUFACTURERfacturer;
   Date manufacturedOn; //manufacturedOn is a object of Date
   String name;//Name of the Product, to be initialized in constructor
-  final String MANAFACTURER = item.manafacturer; //name of manufacturer
+  final String MANUFACTURER = Item.MANUFACTURER; //name of manufacturer
 
   static int currentProductionNumber = 0; //This is static so it can constantly be incremented.
 
@@ -56,6 +57,17 @@ public abstract class Product implements Item {
 
   }
 
+//  static <T extends Product&MultimediaControl > void printType(List<?> list, Class<?> c){
+//  for (Object o : list){
+//    if(!c.isInstance(o)){
+//      //Class doesnt ma
+//      return; false;
+//    }
+//
+//  }
+//
+//  }
+
   @Override
   public String toString() {
     //Override means it will override the default toString method for the class
@@ -68,7 +80,7 @@ public abstract class Product implements Item {
 
          */
 
-    String line = "Manufacturer  : " + MANAFACTURER + "\n" +
+    String line = "Manufacturer  : " + MANUFACTURER + "\n" +
         "Serial Number : " + serialNumber + "\n" +
         "Date          : " + getManufactureDate() + "\n" +
         "Name          : " + name;

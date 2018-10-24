@@ -20,7 +20,7 @@ public interface Item {
 
   //Methods to be further implemented by Product Class
 
-  static final String MANAFACTURER = "OracleProduction";
+  static final String MANUFACTURER = "OracleProduction";
 
   void setProductionNumber(int parameter);
 
