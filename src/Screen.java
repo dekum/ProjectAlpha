@@ -21,8 +21,8 @@ public class Screen implements ScreenSpec {
   @Override
   public String toString() {
     String line = "Resolution : " + resolution + "\n" +
-        "Refreshrate : " + refreshrate + "\n" +
-        "Responsetime : " + responsetime;
+        "Refresh Rate : " + refreshrate + "\n" +
+        "Response Time : " + responsetime;
 
     //I use line because I felt it was easier to code with
     return line;
