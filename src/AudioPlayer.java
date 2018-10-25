@@ -2,12 +2,22 @@ public class AudioPlayer extends  Product implements MultimediaControl {
   private String audioSpecification;
   private ItemType mediaType;
 
+  public AudioPlayer() {
+    super("The Zune");
+    audioSpecification = "MP3-A";
+    mediaType = ItemType.AUDIO;
+  }
+
   AudioPlayer(String name, String audioSpecification){
     super(name);
 
     this.audioSpecification= audioSpecification;
     this.mediaType= ItemType.AUDIO ;
 
+  }
+
+  public String getAudioSpecification() {
+    return audioSpecification;
   }
 
   @Override
@@ -47,5 +57,23 @@ public class AudioPlayer extends  Product implements MultimediaControl {
     AudioPlayer ap = new AudioPlayer("J","Lw");
     System.out.println(ap.toString());
 
+  }
+  public int compareTo(Product p) {
+    /**
+     * Overriden Collection.sort's methos to use this method.
+     * Without it wouldn't know what to sore
+     */
+    return name.compareTo(p.getName());
+    //Returns 1 if Greater than
+    //Return 0 is equal
+    //Return -1
+
+  }
+
+@Override
+  public int compareTo(Object o) {
+  //  System.out.println("AudioPlayer compareto");
+  return super.compareTo(o);
+   // return 0;
   }
 }

@@ -9,20 +9,44 @@
  * Abstract classes work great as blueprints, and encourages reusing code.
  */
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public abstract class Product implements Item {
+public abstract class Product implements Item,Comparable {
   //Abstract classes cannot be implemented, but are useful for classes that have similar methods to extend from.
   //Product will implement the basic functionality that all items on a production line should have.
-  static int serialNumber;
+   int serialNumber;
   //String MANUFACTURERfacturer;
   Date manufacturedOn; //manufacturedOn is a object of Date
   String name;//Name of the Product, to be initialized in constructor
   final String MANUFACTURER = Item.MANUFACTURER; //name of manufacturer
+  static ArrayList<Product> productList = new ArrayList<>();
+@Override
+  public int compareTo(Object o) {
+  //System.out.println("HERE In Product");
+ // o =  (Product)o;
+  return name.compareTo(((Product) o).getName());
+  }
 
-  static int currentProductionNumber = 0; //This is static so it can constantly be incremented.
+  public int compareTo(Product p) {
+    /**
+     * Overriden Collection.sort's methos to use this method.
+     * Without it wouldn't know what to sore
+     */
+   return name.compareTo(p.getName());
+   //Returns 1 if Greater than
+    //Return 0 is equal
+    //Return -1
 
+  }
+
+  static int currentProductionNumber = 1; //This is static so it can constantly be incremented.
+
+
+  public static ArrayList<Product> getProductList() {
+    return productList;
+  }
 
   public void setProductionNumber(int productionNumber) {
     ///this.currentProductionNumber = parameter;
@@ -53,6 +77,7 @@ public abstract class Product implements Item {
     serialNumber = currentProductionNumber++;//SeriesNumber received productionNumber
     // and productNumber will increment by one
     manufacturedOn = new Date(); //manafacturedOn will receive new Date, set to current time the program runs
+    productList.add(this);
 
 
   }

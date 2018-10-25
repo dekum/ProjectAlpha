@@ -8,6 +8,12 @@ MonitorType monitorType;
     this.monitorType = monitorType;
   }
 
+  public MoviePlayer(){
+    super("Windows Media PLayer Classic");
+    screen = new Screen("200x200", 33,33);
+    monitorType= MonitorType.LCD;
+  }
+
   @Override
   public void play() {
     System.out.println("Playing Movie");
@@ -39,5 +45,24 @@ MonitorType monitorType;
         "\nScreen : " + screen +
         " \nMonitorType: " + monitorType
         ;
+  }
+
+  public int compareTo(Product p) {
+    /**
+     * Overriden Collection.sort's methos to use this method.
+     * Without it wouldn't know what to sore
+     */
+    return name.compareTo(p.getName());
+    //Returns 1 if Greater than
+    //Return 0 is equal
+    //Return -1
+
+  }
+
+  @Override
+  public int compareTo(Object o) {
+    //System.out.println("Movie player compare");
+    return super.compareTo(o);
+
   }
 }
