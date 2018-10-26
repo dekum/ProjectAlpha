@@ -28,7 +28,7 @@ public class AudioPlayer extends  Product implements MultimediaControl {
 
   @Override
   public void stop() {
-    System.out.println("Stop");
+    System.out.println("Stopping");
 
   }
 
@@ -40,7 +40,7 @@ public class AudioPlayer extends  Product implements MultimediaControl {
 
   @Override
   public void next() {
-    System.out.println("next");
+    System.out.println("Next");
 
   }
 

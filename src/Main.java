@@ -34,8 +34,8 @@ public class Main {
 //    }
 //
 
-   // MoviePlayerDriver.testMoviePlayer();
-    //PlayerDriver.testPlayer();
+    MoviePlayerDriver.testMoviePlayer();
+    PlayerDriver.testPlayer();
 
     /**
      * Create a arraylist of Products called productList
@@ -53,7 +53,7 @@ public class Main {
      *
      */
     //Write ome line of code to create and Array of products
-    ArrayList<Product> productList = new ArrayList<>();
+    ArrayList<Product> productList = new ArrayList<>(); //Change to studentProducts for replit
     //Write one line of code to call testCollection and assign the result to the arraylist
     productList = testCollection();
 

@@ -16,26 +16,26 @@ MonitorType monitorType;
 
   @Override
   public void play() {
-    System.out.println("Playing Movie");
+    System.out.println("Playing movie");
 
 
   }
 
   @Override
   public void stop() {
-    System.out.println("Stop Movie");
+    System.out.println("Stop movie");
 
   }
 
   @Override
   public void previous() {
-    System.out.println("Previous Movie");
+    System.out.println("Previous movie");
 
   }
 
   @Override
   public void next() {
-    System.out.println("next Movie");
+    System.out.println("Next movie");
 
   }
 
