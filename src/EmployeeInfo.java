@@ -1,9 +1,26 @@
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class EmployeeInfo {
 
   StringBuilder name = new StringBuilder(); //Need to Initalize a stringbuilder because you can append it.
  String code;
+  String deptId;
+  Pattern p;
+  Scanner in;
+
+  public String getDeptId(){
+
+  }
+ private void setDeptId(){
+
+ }
+ private String getId(){
+
+ }
+ private boolean validId(String id){
+
+ }
 
   public StringBuilder getName(){
 return name;
@@ -68,6 +85,8 @@ return code;
  }
 
   public EmployeeInfo() {
+    Scanner scanner = new Scanner(System.in);
+
     setName();
     checkName(name);
     createEmployeeCode(name);
