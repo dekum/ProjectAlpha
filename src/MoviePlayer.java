@@ -58,13 +58,5 @@ MonitorType monitorType;
 //
 //  }
 
-  @Override
-  public int compareTo(Object o) {
-    /**
-     * This method will call Product's compareTo, where it will sort by name
-     */
-    //System.out.println("Movie player compare");
-    return super.compareTo(o);
 
-  }
 }

@@ -60,12 +60,4 @@ public class AudioPlayer extends  Product implements MultimediaControl {
   }
 
 
-@Override
-  public int compareTo(Object o) {
-  /**
-   * This method will call Product's compareTo, where it will sort by name
-   */
-  return super.compareTo(o); //Product's compareTo result be will be the same as this
-
-  }
 }

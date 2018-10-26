@@ -34,8 +34,8 @@ public class Main {
 //    }
 //
 
-    MoviePlayerDriver.testMoviePlayer();
-    PlayerDriver.testPlayer();
+   // MoviePlayerDriver.testMoviePlayer();
+   // PlayerDriver.testPlayer();
 
     /**
      * Create a arraylist of Products called productList
@@ -75,15 +75,16 @@ public class Main {
 
 
   }
-  public static void print(ArrayList<Product> products){
+  public static  <T> void print(List<T> products){
+
     /**
      * Prints content of arraylist in the parameter.
      * In this program it shows that the arraylist is sorted by name.
      */
 
-    for (Product p :products
-    ) {
-      System.out.println(p.toString());
+    for (T t :products) {
+
+      System.out.println(t.toString());
 
     }
   }

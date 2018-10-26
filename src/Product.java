@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public abstract class Product implements Item,Comparable {
+public abstract class Product implements Item,Comparable <Product> {
 
   /**
    * Abstract classes cannot be implemented, but are useful for classes that have similar methods to extend from.
@@ -27,7 +27,14 @@ public abstract class Product implements Item,Comparable {
   final String MANUFACTURER = Item.MANUFACTURER; //name of manufacturer
 
 @Override
-  public int compareTo(Object o) {
+//  public int compareTo(Product o) {
+//
+//  //System.out.println("HERE In Product");
+// // o =  (Product)o;
+//  return name.compareTo(((Product) o).getName());
+//  }
+
+  public int compareTo(Product p) {
   /**
    * This will sort objects of projects by their field "name"
    * Since the objects we make in program are AudioPlayer and MoviePlayer I have them call this method
@@ -36,16 +43,6 @@ public abstract class Product implements Item,Comparable {
    * -1, if first string is lower lexicographic than the second., 0 if equal And 1 if first  is greater.
    *
    */
-  //System.out.println("HERE In Product");
- // o =  (Product)o;
-  return name.compareTo(((Product) o).getName());
-  }
-
-  public int compareTo(Product p) {
-    /**
-     * Overriden Collection.sort's methos to use this method.
-     * Without it wouldn't know what to sore
-     */
    return name.compareTo(p.getName());
    //Returns 1 if Greater than
     //Return 0 is equal
