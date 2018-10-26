@@ -13,36 +13,27 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public abstract class Product implements Item,Comparable <Product> {
-
-  /**
-   * Abstract classes cannot be implemented, but are useful for classes that have similar methods to extend from.
-   *  Product will implement the basic functionality that all items on a production line should have.
-   */
-
+public abstract class Product implements Item,Comparable {
+  //Abstract classes cannot be implemented, but are useful for classes that have similar methods to extend from.
+  //Product will implement the basic functionality that all items on a production line should have.
    int serialNumber;
   //String MANUFACTURERfacturer;
   Date manufacturedOn; //manufacturedOn is a object of Date
   String name;//Name of the Product, to be initialized in constructor
   final String MANUFACTURER = Item.MANUFACTURER; //name of manufacturer
-
+  static ArrayList<Product> productList = new ArrayList<>();
 @Override
-//  public int compareTo(Product o) {
-//
-//  //System.out.println("HERE In Product");
-// // o =  (Product)o;
-//  return name.compareTo(((Product) o).getName());
-//  }
+  public int compareTo(Object o) {
+  //System.out.println("HERE In Product");
+ // o =  (Product)o;
+  return name.compareTo(((Product) o).getName());
+  }
 
   public int compareTo(Product p) {
-  /**
-   * This will sort objects of projects by their field "name"
-   * Since the objects we make in program are AudioPlayer and MoviePlayer I have them call this method
-   * to sort the elements.
-   * This method return an Int because the result of a compareTo is either a -1,0,1
-   * -1, if first string is lower lexicographic than the second., 0 if equal And 1 if first  is greater.
-   *
-   */
+    /**
+     * Overriden Collection.sort's methos to use this method.
+     * Without it wouldn't know what to sore
+     */
    return name.compareTo(p.getName());
    //Returns 1 if Greater than
     //Return 0 is equal
@@ -53,6 +44,9 @@ public abstract class Product implements Item,Comparable <Product> {
   static int currentProductionNumber = 1; //This is static so it can constantly be incremented.
 
 
+  public static ArrayList<Product> getProductList() {
+    return productList;
+  }
 
   public void setProductionNumber(int productionNumber) {
     ///this.currentProductionNumber = parameter;
@@ -83,12 +77,21 @@ public abstract class Product implements Item,Comparable <Product> {
     serialNumber = currentProductionNumber++;//SeriesNumber received productionNumber
     // and productNumber will increment by one
     manufacturedOn = new Date(); //manafacturedOn will receive new Date, set to current time the program runs
-
+    productList.add(this);
 
 
   }
 
+  static <T extends Product&MultimediaControl > void printType(List<?> list, Class<?> c){
+  for (Object o : list){
+    if(c.isInstance(o)){
+      //Class doesnt ma
+   //   return false;
+    }
 
+  }
+
+  }
 
   @Override
   public String toString() {
