@@ -62,6 +62,23 @@ public class Main {
     //Call print method on the array list
    print(productList);
 
+
+    System.out.println("\n\n Now Print Audio players");
+    Product.printType(productList,AudioPlayer.class);
+    System.out.println("\n\n\n print only MoviePlayers");
+   //Print only MoviePlayer objects
+    Product.printType(productList,MoviePlayer.class);
+
+
+
+    //Class<?> aClass = productList;
+//    MoviePlayer j = new MoviePlayer();
+//    System.out.println("\n\n \n ONLY MOIE PLAYER YO"); Bad Way of doing this
+//    Product.printType(productList, j.getClass() );
+//AudioPlayer w = new AudioPlayer();
+//    System.out.println("\n\n \n AudioPlayers Show up");
+//    Product.printType(productList, w.getClass() );
+
     //Step 15
     //Compelete the header for the testCollection method here
 

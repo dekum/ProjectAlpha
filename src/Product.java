@@ -91,7 +91,17 @@ public abstract class Product implements Item,Comparable {
 
   }
 
+  static void printType(List<?> list, Class<? extends Product> c){
+  for (Object o : list){
+    if (c.isInstance(o)) { //Check if Object's class is a
+      //Class Matches
+      System.out.println(o.toString());
+    }
 
+
+  }
+
+  }
 
   @Override
   public String toString() {
