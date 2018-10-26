@@ -34,8 +34,8 @@ public class Main {
 //    }
 //
 
-    MoviePlayerDriver.testMoviePlayer();
-    PlayerDriver.testPlayer();
+    //MoviePlayerDriver.testMoviePlayer();
+//    PlayerDriver.testPlayer();
 
     /**
      * Create a arraylist of Products called productList
@@ -60,14 +60,15 @@ public class Main {
     // write one line of code to sort arraylist
     Collections.sort(productList);
     //Call print method on the array list
-   print(productList);
+  // print(productList);
+    EmployeeInfo empInfo = new EmployeeInfo();
 
 
-    System.out.println("\n\n Now Print Audio players");
-    Product.printType(productList,AudioPlayer.class);
-    System.out.println("\n\n\n print only MoviePlayers");
+    //System.out.println("\n\n Now Print Audio players");
+    //Product.printType(productList,AudioPlayer.class);
+    //System.out.println("\n\n\n print only MoviePlayers");
    //Print only MoviePlayer objects
-    Product.printType(productList,MoviePlayer.class);
+    //Product.printType(productList,MoviePlayer.class);
 
 
 
