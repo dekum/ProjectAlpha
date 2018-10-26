@@ -36,7 +36,22 @@ public class Main {
 
    // MoviePlayerDriver.testMoviePlayer();
     //PlayerDriver.testPlayer();
-    //End of program
+
+    /**
+     * Create a arraylist of Products called productList
+     * The item in the arraylist will be set by testCollections method()
+     * After which Collections.sort will sort the elemnts in the productList.
+     * Product needs to implement Comparable, and implement it's compareTo method.
+     * Since AudioPlayer and MoviePlayer are subclasses of Product they also need Comparable's method.
+     * I have my AP and MP classes call super.compareTo which will call Product's compareTo method which I changed
+     * (1/2)/ Product's compareTo method, takes an object and casts as a Product, which I can do because I know a product will be sent to it.
+     * (2/3) Since the object is considerd a Product now, i can use it's .getName method and use
+     * (3/3) String class's compareTo method to compare the names of two Product's.
+     * Product's compareTo will return the result which is either a -1,0 or 1.
+     * Thus Collections.sort will use AudioPlayer's and Movieplayer's compareTo Method, and will sort by Names of objects.
+     * Lastly there a method to print whats in the arraylist List.
+     *
+     */
     //Write ome line of code to create and Array of products
     ArrayList<Product> productList = new ArrayList<>();
     //Write one line of code to call testCollection and assign the result to the arraylist
@@ -58,8 +73,13 @@ public class Main {
 
 
 
+
   }
   public static void print(ArrayList<Product> products){
+    /**
+     * Prints content of arraylist in the parameter.
+     * In this program it shows that the arraylist is sorted by name.
+     */
 
     for (Product p :products
     ) {
@@ -69,17 +89,16 @@ public class Main {
   }
 
   private static ArrayList<Product> testCollection() {
+    /**
+     * Adds element to the ArrayList of products
+     * Returns the newly added elements to a ArrayList<Product> in main
+     */
     ArrayList<Product> products = new ArrayList<>();
     AudioPlayer a1 = new AudioPlayer("iPod Mini", "MP3");
     AudioPlayer a2 = new AudioPlayer("Walkman ", "WAV");
     MoviePlayer m1 = new MoviePlayer("DBPOWER MK101", new Screen("720x480",40,22),MonitorType.LCD);
     MoviePlayer m2 = new MoviePlayer("Pyle PdV156BK", new Screen("1366x768",40,22),MonitorType.LED);
 
-    a1.toString();
-    a2.toString();
-    m1.toString();
-    m2.toString();
-    System.out.println("here");
     products.add(a1);
     products.add(a2);
     products.add(m1);

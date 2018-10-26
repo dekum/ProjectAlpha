@@ -58,22 +58,14 @@ public class AudioPlayer extends  Product implements MultimediaControl {
     System.out.println(ap.toString());
 
   }
-  public int compareTo(Product p) {
-    /**
-     * Overriden Collection.sort's methos to use this method.
-     * Without it wouldn't know what to sore
-     */
-    return name.compareTo(p.getName());
-    //Returns 1 if Greater than
-    //Return 0 is equal
-    //Return -1
 
-  }
 
 @Override
   public int compareTo(Object o) {
-  //  System.out.println("AudioPlayer compareto");
-  return super.compareTo(o);
-   // return 0;
+  /**
+   * This method will call Product's compareTo, where it will sort by name
+   */
+  return super.compareTo(o); //Product's compareTo result be will be the same as this
+
   }
 }

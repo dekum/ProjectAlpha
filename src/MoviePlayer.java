@@ -47,20 +47,22 @@ MonitorType monitorType;
         ;
   }
 
-  public int compareTo(Product p) {
-    /**
-     * Overriden Collection.sort's methos to use this method.
-     * Without it wouldn't know what to sore
-     */
-    return name.compareTo(p.getName());
-    //Returns 1 if Greater than
-    //Return 0 is equal
-    //Return -1
-
-  }
+//  public int compareTo(Product p) {
+//    /**
+//     *This methos will call Product's
+//     */
+//    return name.compareTo(p.getName());
+//    //Returns 1 if Greater than
+//    //Return 0 is equal
+//    //Return -1
+//
+//  }
 
   @Override
   public int compareTo(Object o) {
+    /**
+     * This method will call Product's compareTo, where it will sort by name
+     */
     //System.out.println("Movie player compare");
     return super.compareTo(o);
 
