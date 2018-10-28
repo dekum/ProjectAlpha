@@ -8,8 +8,6 @@ public class AudioPlayerDriver{
 //private ItemType mediaType;
 
   public static void  testAudioPlayer(){
-
-
     AudioPlayer ap = new AudioPlayer("ipod Mini", "MP3");
     ap.play();
     ap.stop();
