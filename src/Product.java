@@ -98,7 +98,6 @@ public abstract class Product implements Item,Comparable <Product> {
         System.out.println(o.toString());
       }
 
-
     }
 
   }
