@@ -13,12 +13,20 @@ public class EmployeeInfo {
 
   }
  private void setDeptId(){
+   getDeptId();
+   Boolean isValid = validId(deptId);
+   if (isValid){
+     deptId = deptId;
+   }else{
+     deptId = "None01";
+   }
 
  }
  private String getId(){
 
  }
  private boolean validId(String id){
+    return deptId==id;
 
  }
 
@@ -91,5 +99,13 @@ return code;
     checkName(name);
     createEmployeeCode(name);
 
+  }
+
+  @Override
+  public String toString() {
+    return "EmployeeInfo" +
+        "code='" + code + '\'' +
+        ", deptId='" + deptId + '\'' +
+        '}';
   }
 }
