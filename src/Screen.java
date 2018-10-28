@@ -1,4 +1,5 @@
 /**
+ * Philemon Petit-Frere
  * Screen.java
  * It implements methods of the ScreenSpec interface.
  * This Class take 3 parameters (String,int,int) and creates a Screen object

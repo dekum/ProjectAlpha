@@ -1,4 +1,5 @@
 /**
+ * Philemon Petit-Frere
  * MoviePlayer.java
  * 10/20/2018
  * MoviePlayer is a subclass of Product class and implements MultimediaControl's methods

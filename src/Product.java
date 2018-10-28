@@ -9,7 +9,7 @@
  * Abstract classes work great as blueprints, and encourages reusing code.
  * For Step 16 Product now also implements Comparable, a Java Collection that can compare objects.
  * It implemented Comparable's method  "compareTo" where you can change which variable it compares and returns the result.
- * Comparable has diamond
+ * Comparable has diamond Product because I know I will only send subclass of Product objects.
  */
 
 import java.util.ArrayList;

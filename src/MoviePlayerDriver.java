@@ -1,11 +1,14 @@
+/**
+ * Philemon Petit-Frere
+ * MoviePlayerDriver.java
+ * Create objects of MoviePlayer and print their toStrings.
+ */
 public class MoviePlayerDriver{
 //private String audioSpecification;
 //private ItemType mediaType;
 
   public static void  testMoviePlayer(){
-/**
- * Create objects of MoviePlayer and print their toStrings.
- */
+
     MoviePlayer mp = new MoviePlayer("DBPOWER MK101",new Screen("720x480",40,22),MonitorType.LCD);
     System.out.println(mp.toString());
     System.out.println("\n");

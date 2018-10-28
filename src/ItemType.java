@@ -1,4 +1,5 @@
 /**
+ * Philemon Petit-Frere
  * /*All items will have a pre-set type. Currently there are 4 types.
  * Create an enum called ItemType that will store the following information.
  * Type Code

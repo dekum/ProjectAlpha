@@ -1,4 +1,5 @@
 /**
+ * Philemon Petit-Frere
  * ScreenSpec.java
  * This interface contains the methods used by Screen class
  *

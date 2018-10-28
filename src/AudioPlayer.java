@@ -1,4 +1,5 @@
 /**
+ * Philemon Petit-Frere
  * AudioPlayer.java
  * 10/20/2018
  * AudioPLayer is a subclass of Product class and implements MultimediaControl's methods

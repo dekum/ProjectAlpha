@@ -1,11 +1,14 @@
+/**
+ * Philemon Petit-Frere
+ * AudioPlayerDriver.java
+ * A class to test creating AudioPlayer objects, and it's methods.
+ */
 public class AudioPlayerDriver{
 //private String audioSpecification;
 //private ItemType mediaType;
 
   public static void  testAudioPlayer(){
-    /**
-     * A class to test creating AudioPlayer objects, and it's methods.
-     */
+
 
     AudioPlayer ap = new AudioPlayer("ipod Mini", "MP3");
     ap.play();

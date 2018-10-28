@@ -1,4 +1,5 @@
 /**
+ * Philemon Petit-Frere
  * MultimediaControl.java
  * 10/20/1
  * This class simulates how a audio device would control what being played.
