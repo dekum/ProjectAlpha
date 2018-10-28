@@ -20,13 +20,5 @@ public class PlayerDriver {
     mc2.play();
     mc2.previous();
     mc2.stop();
-
-
-    //Testing sorting
-    //ArrayList<Product> productList= new ArrayList<>();
-
-    //productList
-
-
   }
 }

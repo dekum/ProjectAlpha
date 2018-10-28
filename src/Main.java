@@ -1,12 +1,12 @@
 /**
  * Philemon Petit-Frere
- * 9/27/2018
+ * 9/27/2018 - 10/27/2018 Update
  * COP 3003 - OOP
  * Project: ProjectAlpha
  * File: Main
  * Purpose of Project: design a template in Java for creating and recording all future
  * production line items. Also also allow easy modification to handle different products
- *Sources for help: Stackexchange, Garrett Grabber, github.com
+ *Sources for help: Stackexchange, Garrett Grabber, github.com, Nathalie Crespo, tutorialPoint,geeksforgeeks.org
  *
  */
 
@@ -34,8 +34,8 @@ public class Main {
 //    }
 //
 
-   // MoviePlayerDriver.testMoviePlayer();
-   // PlayerDriver.testPlayer();
+   MoviePlayerDriver.testMoviePlayer();
+   PlayerDriver.testPlayer();
 
     /**
      * Create a arraylist of Products called productList
@@ -60,19 +60,13 @@ public class Main {
     // write one line of code to sort arraylist
     Collections.sort(productList);
     //Call print method on the array list
-   print(productList);
+    print(productList);
 
     //Step 15
     //Compelete the header for the testCollection method here
-
-
-
-
-
-
-
-
-
+    //Demostrate Product's printType
+    Product.printType(productList,AudioPlayer.class); //prints only audioplayer objects in productList
+    Product.printType(productList,MoviePlayer.class); //prints only MoviePlayer objects in productList
 
   }
   public static  <T> void print(List<T> products){
@@ -83,9 +77,7 @@ public class Main {
      */
 
     for (T t :products) {
-
       System.out.println(t.toString());
-
     }
   }
 
@@ -105,9 +97,7 @@ public class Main {
     products.add(m1);
     products.add(m2);
     return products;
-
   }
-
 }
 
 abstract class Widget extends Product {
@@ -116,5 +106,4 @@ abstract class Widget extends Product {
     //Widget accepts a name, then uses that name as a parameter for Product's constructor
     super(name);//The super of Widget is Prodct, this will call it's constructor.
   }
-
 }

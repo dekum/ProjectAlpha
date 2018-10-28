@@ -1,3 +1,11 @@
+/**
+ * Screen.java
+ * It implements methods of the ScreenSpec interface.
+ * This Class take 3 parameters (String,int,int) and creates a Screen object
+ * This class is used by MoviePlayer to create an object.
+ *
+ */
+
 public class Screen implements ScreenSpec {
   String resolution;
   int refreshrate;
@@ -26,7 +34,6 @@ public class Screen implements ScreenSpec {
 
     //I use line because I felt it was easier to code with
     return line;
-
   }
   public Screen(String resolution, int refreshrate, int responsetime) {
     this.resolution = resolution;

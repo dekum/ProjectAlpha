@@ -16,21 +16,23 @@ import java.util.*;
 
 
 public interface Item {
-
-
   //Methods to be further implemented by Product Class
 
+  //A constant called manufacturer that would be set to “OracleProduction”.
   static final String MANUFACTURER = "OracleProduction";
 
-  void setProductionNumber(int parameter);
+  //A method setProductionNumber that would have one integer parameter
+  public void setProductionNumber(int productionNumber);
 
-  void setName(String name);
+  //A method setName that would have one String parameter
+  public void setName(String name);
 
-  String getName();
+  //A method getName that would return a String
+  public String getName();
 
-  Date getManufactureDate();
+  //A method getManufactureDate that would return a Date
+  public Date getManufactureDate();
 
-  int getSerialNumber();
-
-
+  //A method getSerialNumber that would return an int
+  public int getSerialNumber();
 }
