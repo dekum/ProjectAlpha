@@ -1,5 +1,18 @@
 import java.util.Scanner;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+/**
+ * EmployeeInfo.java
+ * 10/26/2018
+ * Philemon Petit-Frere
+ * The department code is made up of four letters and two numbers.
+ * The format of the department code is the first letter must be in uppercase with the following three all
+ * being lowercase and no spaces.
+ *
+ *
+ * sources: https://regexr.com/ (For making java patterns)
+ */
 
 public class EmployeeInfo {
 
@@ -9,24 +22,55 @@ public class EmployeeInfo {
   Pattern p;
   Scanner in;
 
+  public String reverseString(String id){
+    String reverse = "";
+
+
+    for(int i = id.length() - 1; i >= 0; i--)
+    {
+      reverse = reverse + id.charAt(i);
+    }
+
+    System.out.println("Reversed string is:");
+    System.out.println(reverse);
+    return id;
+
+  };
+
   public String getDeptId(){
+    System.out.println("Print Dept ID");
+    String input2 = in.nextLine();
+ //   String input2 = "Jake22";;
+    return input2;
 
   }
  private void setDeptId(){
-   getDeptId();
-   Boolean isValid = validId(deptId);
-   if (isValid){
+   String inputId = getDeptId();
+   //Boolean isValid = validId(deptId);
+   if (validId(inputId)){
+     //if the ID is valid, then match them
+     reverseString(inputId); //Really confused on Step 20, is DeptId supposed to be reversed, or what the user inputted.
      deptId = deptId;
    }else{
      deptId = "None01";
    }
+   System.out.println(deptId);
 
  }
  private String getId(){
-
- }
+   return deptId;
+  }
  private boolean validId(String id){
-    return deptId==id;
+Boolean matches =false;
+
+   Matcher matcher = p.matcher(id);
+   matches = matcher.matches();
+   if (matches){
+     System.out.println("MATCGHES!!!");
+   }
+
+    return matches;
+   // return deptId.equals(id);
 
  }
 
@@ -93,11 +137,16 @@ return code;
  }
 
   public EmployeeInfo() {
-    Scanner scanner = new Scanner(System.in);
+    in = new Scanner(System.in);
 
     setName();
     checkName(name);
     createEmployeeCode(name);
+    String patternString = "([A-Z])[a-z][a-z][a-z]\\d\\d";
+    p = Pattern.compile(patternString);
+    setDeptId();
+    in.close();
+
 
   }
 

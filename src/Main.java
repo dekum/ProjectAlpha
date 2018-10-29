@@ -62,6 +62,7 @@ public class Main {
     //Call print method on the array list
   // print(productList);
     EmployeeInfo empInfo = new EmployeeInfo();
+    System.out.println(empInfo.toString());
 
 
     //System.out.println("\n\n Now Print Audio players");
