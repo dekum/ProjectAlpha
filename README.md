@@ -1,13 +1,13 @@
 # ProjectAlpha
 
  * Philemon Petit-Frere
- * 9/27/2018
+ * 10/29/2018
  * COP 3003 - OOP
  * Project: ProjectAlpha
  * File: Main
  * Purpose of Project: design a template in Java for creating and recording all future
  * production line items. Also also allow easy modification to handle different products
- *Sources for help: Stackexchange, Garrett Graber, github.com
+ *Sources for help: Stackexchange, Garrett Graber, Nathalie Crespo, github.com, http://tutorials.jenkov.com/java-regex/pattern.html, geeksforgeeks,https://www.tutorialspoint.com/, 
  
 <h4>Goal:</h4>
 <p>Create a production plant for any type of product ranging from a simple packaging system to a variety of electronic devices.
@@ -45,7 +45,6 @@ Visual | VI
 
   static int currentProductionNumber = 0;
 
-
 <h3> Summary </h3>
 
 * There exists a Main class, a Widget class, Product class, and Item interface.
@@ -63,7 +62,7 @@ When user runs Main(), it will display:
 
 Next then it will display ItemType's fields.
 
-Tested on Windows 10, IntelJ IDEA 32-bit on 9/29/18.
+Tested on Windows 10, IntelJ IDEA 32-bit on 10/28/18.
 
 </p>
 
