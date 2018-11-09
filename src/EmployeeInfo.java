@@ -23,19 +23,17 @@ public class EmployeeInfo {
   Scanner in;
 
   public String reverseString(String id){
-    String reverse = "";
+    char letter = id.charAt(id.length()-1);
 
+    if ( id.length() == 1){
+      return Character.toString(letter);
 
-    for(int i = id.length() - 1; i >= 0; i--)
-    {
-      reverse = reverse + id.charAt(i);
+    }else{
+      System.out.println(letter);
+      return letter+reverseString(id.substring(0,id.length()-1));
     }
 
-    System.out.println("Reversed string is:");
-    System.out.println(reverse);
-    return id;
-
-  };
+  }
 
   public String getDeptId(){
     System.out.println("Print Dept ID");
@@ -49,8 +47,8 @@ public class EmployeeInfo {
    //Boolean isValid = validId(deptId);
    if (validId(inputId)){
      //if the ID is valid, then match them
-     reverseString(inputId); //Really confused on Step 20, is DeptId supposed to be reversed, or what the user inputted.
-     deptId = deptId;
+     deptId=reverseString(inputId); //Really confused on Step 20, is DeptId supposed to be reversed, or what the user inputted.
+
    }else{
      deptId = "None01";
    }
@@ -112,6 +110,7 @@ return code;
    System.out.println(input1);
 
    return input1;
+
  }
  private boolean checkName(StringBuilder name)
  {
