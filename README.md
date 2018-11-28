@@ -4,7 +4,6 @@
  * 10/29/2018
  * COP 3003 - OOP
  * Project: ProjectAlpha
- * File: Main
  * Purpose of Project: design a template in Java for creating and recording all future
  * production line items. Also also allow easy modification to handle different products
  *Sources for help: Stackexchange, Garrett Graber, Nathalie Crespo, github.com, http://tutorials.jenkov.com/java-regex/pattern.html, geeksforgeeks,https://www.tutorialspoint.com/, 
@@ -66,6 +65,13 @@ Tested on Windows 10, IntelJ IDEA 32-bit on 10/28/18.
 
 </p>
 
+<h3>Techniques
+ <p>Program demostrates <hr> 
+ **Polymorphism**: is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
+
+Any Java object that can pass more than one IS-A test is considered to be polymorphic. In Java, all Java objects are polymorphic since any object will pass the IS-A test for their own type and for the class Object.
+
+In this project, Chasis is a child class of __
 
 
 
