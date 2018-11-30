@@ -10,6 +10,7 @@
  *
  */
 
+import java.io.IOException;
 import  java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -63,6 +64,14 @@ public class Main {
   // print(productList);
     EmployeeInfo empInfo = new EmployeeInfo();
     System.out.println(empInfo.toString());
+    ProcessFiles pf = new ProcessFiles();
+   // EmployeeInfo emp = new EmployeeInfo();
+    try {
+      pf.WriteFile(empInfo);
+      pf.WriteFile(productList);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
 
 
     //System.out.println("\n\n Now Print Audio players");
@@ -123,6 +132,8 @@ public class Main {
     products.add(m1);
     products.add(m2);
     return products;
+
+
 
   }
 
