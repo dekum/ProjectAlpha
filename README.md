@@ -17,6 +17,21 @@ For this particular production facility you will only implement a concrete class
 ## Table of Contents
 - [Step 1](#Step-1)
 - [Step 2](#Step-2)
+- [Step 3](#Step-3)
+- [Step 4](#Step-4)
+- [Step 5](#Step-5)
+- [Step 6](#Step-6)
+- [Step 7](#Step-7)
+- [Step 8](#Step-8)
+- [Step 9](#Step-9)
+- [Step 10](#Step-10)
+- [Step 11](#Step-11)
+- [Step 12](#Step-12)
+- [Step 13](#Step-13)
+- [Step 14](#Step-14)
+- [Step 15](#Step-15)
+- [Step 16](#Step-16)
+- [Credits](#Credits)
 
 <h4>Step 1</h4>
 Create a Item inteface with the following methods
@@ -309,7 +324,7 @@ Tested on Windows 10, IntelJ IDEA 32-bit on 12/01/2018
 
 </p>
 
-<h3>Techniques
+<h4>Techniques</h4>
  Program demostrates <hr> 
  
  **Polymorphism** : is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
@@ -318,13 +333,16 @@ Any Java object that can pass more than one IS-A test is considered to be polymo
 
 **Interfaces** : An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface. Inteface methods and fields must be public, and the methods code blocks must be blakn. 
 
-**Overriding ** : a feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes. When the method is called from another object, the subclasses's overriden mehtod is called instead of the superclass's overidden method.
+**Overriding** : a feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes. When the method is called from another object, the subclasses's overriden mehtod is called instead of the superclass's overidden method.
 
-<h3>Credits</h4>
+<h4>Credits</h4>
 <hr>
 JP Project is a scenario created by Oracle Academy for the purpose of teaching Java.
  
 This program is authored by Philemon Petit-Frere.
+
+<h4>Notes</h4>
+This is the uncompleted verison of the JP project, the finished verison with a gui and a database can he found [here](https://github.com/dekum/JPProject)
 
 
 
