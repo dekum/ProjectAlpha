@@ -12,7 +12,7 @@
 <p>Create a production plant for any type of product ranging from a simple packaging system to a variety of electronic devices.
 create a production line for multimedia devices which include music and movie players.
 Design a template in Java for creating and recording all future production line items.  
-For this particular production facility you will only implement a concrete class for music and movie players.</p>
+For this particular production facility, you will only implement a concrete class for music and movie players.</p>
 
 ## Table of Contents
 - [Step 1](#Step-1)
@@ -28,9 +28,7 @@ For this particular production facility you will only implement a concrete class
 - [Step 11](#Step-11)
 - [Step 12](#Step-12)
 - [Step 13](#Step-13)
-- [Step 14](#Step-14)
-- [Step 15](#Step-15)
-- [Step 16](#Step-16)
+- [Step 14](#step-14---16)
 - [Credits](#Credits)
 
 <h4>Step 1</h4>
@@ -72,7 +70,7 @@ Visual | VI
 * public void previous();
 * public void next()
 
-The classes that implement this interface, will have inherit these methods and define their own function for it.
+The classes that implement this interface, will have to inherit these methods and define their own function for it.
 
 <h4>Step 5</h4>
 <p> We require a concrete class that will allow us to capture the details of an audio player. Create a class
@@ -106,7 +104,7 @@ The classes that implement this interface, will have inherit these methods and d
 ```
 
 <h4>Step 6</h4>
-Create a class called AudioPlayer Driver to test the Audo player class, it will print to screen from the methods of AudioPlayer
+Create a class called AudioPlayer Driver to test the Audio player class, it will print to screen from the methods of AudioPlayer
 
 ```
 public class AudioPlayerDriver{
@@ -141,7 +139,7 @@ Create an interface called ScreenSpec. This will define 3 methods:
 * public int getRefreshRate();
 * public int getResponseTime();
 
-Just like MultimediaControl interace, the methods have nothing in the codeblocks. 
+Just like MultimediaControl interface, the methods have nothing in the code blocks. 
 But a class that implements this will define the methods
  
  
@@ -151,7 +149,7 @@ Create a class called Screen that implements ScreenSpec. Add three fields
 * int refreshrate
 * int responsetime
 
-Screen inherits the methods from ScreenSepc and fills the defintion of methods.
+Screen inherits the methods from ScreenSepc and fills the definition of methods.
 
 ```
 @Override
@@ -170,7 +168,7 @@ Screen inherits the methods from ScreenSepc and fills the defintion of methods.
 
 
 <h4>Step 10</h4>
-Thos step instruction Was to create a driver class to test Screen class, but since screen objects are created when MoviePlayers are.
+This step instruction was to create a driver class to test Screen class, but since screen objects are created when MoviePlayers are.
 This step was combined into Step 12
 <h4>Step 11</h4>
 Create a class called MoviePlayer that extends Product and implements MultimediaControl.
@@ -238,7 +236,7 @@ public class MoviePlayerDriver{
 Create a driver class that will demonstrate that any class that implements the MultimediaControl Interface would be able to be
 instantiated and use its methods used no matter if it was an audio or movie player.
 
-To perform this step, another driver class was created to test if the Class Delaration can be changed to a class that implemented MultimediaControl. It was provent to be true with this code:
+To perform this step, another driver class was created to test if the Class Declaration can be changed to a class that implemented MultimediaControl. It was proven to be true with this code:
 
 ```
 MultimediaControl mc1 = new  AudioPlayer();
@@ -255,14 +253,14 @@ MultimediaControl mc1 = new  AudioPlayer();
 ````
 
 <h4>Step 14 - 16</h4>
-Because of similiar function between 3 steps, thy were merged together to one step.
+Because of similar function between 3 steps, they were merged together to one step.
 Step 14: Add functionality to your classes that would allow them to be sorted by name with the Collections.sort
 method
 Step 15: You should also demonstrate the Collections.sort method
 Step 16: Create a method called print that would take your collection and list all of the contents. It should handle
 all of your classes
 
-First to able to be sort by name, the Class Product imeplemented Comparable, and inherited it's method: comparto.
+First, to able to be sort by name, the Class Product implemented Comparable <Product> and inherited its method: comparto.
 
 ```
 Public abstract class Product implements Item,Comparable {
@@ -287,14 +285,14 @@ The products are varied from audio player and movie player, now with Collection.
 
 ``` Collections.sort(products; ```
 
-Lastly a print method to display the results.
+Lastly, a print method to display the results.
 
 
 ``` public static  <T> void print(List<T> products){
 
     /**
-     * Prints content of arraylist in the parameter.
-     * In this program it shows that the arraylist is sorted by name.
+     * Prints content of ArrayList in the parameter.
+     * In this program it shows that the ArrayList is sorted by name.
      */
 
     for (T t :products) {
@@ -308,19 +306,19 @@ This is a generic method, so any arrayList of any object can be passed as an arg
 
 * There exists a Main class, a Widget class, Product class, and Item interface.
 * Main Class is the driver class, which also contains widget
-* Widget class, extends Product and will intialize it when in Main method
+* Widget class, extends Product and will initialize it when in the Main method
 * Product class is an abstract class that implements Item's methods, and provides methods for Widget
-* Item interface creates classes for Product to implement. Also contain ItemType Enum with fields.
-* A AudiPplayer Class that extendw Product and MultimediaControl interface.
-* A MoviePlayer Class that extendw Product and MultimediaControl interface.
-* Since Product is abstract class, no objecs can be made from it, we the programs makes objects of AudioPlayer and MoviePlayers.
+* Item interface creates classes for Product to implement. Also, contain ItemType Enum with fields.
+* An AudioPlayer Class that extends Product and MultimediaControl interface.
+* A MoviePlayer Class that extends Product and MultimediaControl interface.
+* Since Product is an abstract class, no objects can be made from it, we the programs makes objects of AudioPlayer and MoviePlayers.
 * A Screen class that implements ScreenSpec interface.
 
-When user runs Main(), it will display:
-A list of product's toString, sorted by name regardless of whether it was a AudioPlayer or MoviePlayer.
+When a user runs Main(), it will display:
+A list of product's toString, sorted by name regardless of whether it was an AudioPlayer or MoviePlayer.
 
 
-Tested on Windows 10, IntelJ IDEA 32-bit on 12/01/2018
+Tested on Windows 10, IntelliJ IDEA 32-bit on 12/01/2018
 
 </p>
 
@@ -331,9 +329,9 @@ Tested on Windows 10, IntelJ IDEA 32-bit on 12/01/2018
 
 Any Java object that can pass more than one IS-A test is considered to be polymorphic. In Java, all Java objects are polymorphic since any object will pass the IS-A test for their own type and for the class Object.
 
-**Interfaces** : An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface. Inteface methods and fields must be public, and the methods code blocks must be blakn. 
+**Interfaces** : An interface is a reference type in Java. It is similar to a class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface. Interface methods and fields must be public, and the methods code blocks must be blank. 
 
-**Overriding** : a feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes. When the method is called from another object, the subclasses's overriden mehtod is called instead of the superclass's overidden method.
+**Overriding** : a feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes. When the method is called from another object, the subclasses' overridden method is called instead of the superclass's overridden method.
 
 <h4>Credits</h4>
 <hr>
@@ -342,7 +340,7 @@ JP Project is a scenario created by Oracle Academy for the purpose of teaching J
 This program is authored by Philemon Petit-Frere.
 
 <h4>Notes</h4>
-This is the uncompleted verison of the JP project, the finished verison with a gui and a database can he found [here](https://github.com/dekum/JPProject)
+This is the uncompleted version of the JP project, the finished version with a GUI and a database can be found [here](https://github.com/dekum/JPProject)
 
 
 
