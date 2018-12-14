@@ -19,7 +19,7 @@ For this particular production facility you will only implement a concrete class
 - [Step 2](#Step-2)
 
 <h4>Step 1</h4>
-<p>Create a Item inteface with the following methods
+Create a Item inteface with the following methods
 
 * void setProductionNumber(int parameter);
 
@@ -29,8 +29,8 @@ For this particular production facility you will only implement a concrete class
 
 * Date getManufactureDate();
 
-* int getSerialNumber();</p></p>
-  <h4>Step 2</h4>
+* int getSerialNumber();
+<h4>Step 2</h4>
 Create ItemType Enum with a type: (type,code)
 
   Type | Code
@@ -310,7 +310,8 @@ Tested on Windows 10, IntelJ IDEA 32-bit on 12/01/2018
 </p>
 
 <h3>Techniques
- <p>Program demostrates <hr> 
+ Program demostrates <hr> 
+ 
  **Polymorphism** : is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
 
 Any Java object that can pass more than one IS-A test is considered to be polymorphic. In Java, all Java objects are polymorphic since any object will pass the IS-A test for their own type and for the class Object.
