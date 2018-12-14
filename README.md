@@ -59,7 +59,7 @@ The classes that implement this interface, will have inherit these methods and d
  called AudioPlayer that is a subclass of Product and implements the MultimediaControl interface.</p>
  
  A new class named AudioPlayer is created and it prints to the screen, when it's methods are called.
- ````
+ ```
  public class AudioPlayer extends  Product implements MultimediaControl {
   private String audioSpecification;
   private ItemType mediaType;
@@ -83,7 +83,7 @@ The classes that implement this interface, will have inherit these methods and d
     System.out.println("Next");
   }
 }
-````
+```
 
 <h4>Step 6<h4>
 Create a class called AudioPlayer Driver to test the Audo player class, it will print to screen from the methods of AudioPlayer
@@ -102,7 +102,7 @@ public class AudioPlayerDriver{
     System.out.println(ap2.toString());
   }
 }
-````
+````]
 
 <h4>Step 7</h4>
 The production facility will also create portable movie players. The main difference between these and
@@ -111,8 +111,8 @@ the audio players is that they contain screens.
  Create a monitor Type enum that will store:
  
 * Tye
-*LCD
-*LED|
+* LCD
+* LED
 
 <h4>Step 8</h4>
 Create an interface called ScreenSpec. This will define 3 methods:
@@ -133,7 +133,7 @@ Create a class called Screen that implements ScreenSpec. Add three fields
 
 Screen inherits the methods from ScreenSepc and fills the defintion of methods.
 
-````
+```
 @Override
   public String getResolution() {
     return resolution;
@@ -146,7 +146,7 @@ Screen inherits the methods from ScreenSepc and fills the defintion of methods.
   public int getResponsetime() {
     return responsetime;
   }
-  ````
+  ```
 
 
 <h4>Step 10</h4>
@@ -159,7 +159,7 @@ Complete the methods from the MultimediaControl interface in a similar fashion t
 
 Movie player class is similar to Audio player, but movie player has the screen class as one of its fields.
 
-````
+```
 public class MoviePlayer extends  Product implements  MultimediaControl {
 Screen screen;
 MonitorType monitorType;
@@ -190,7 +190,7 @@ MonitorType monitorType;
     System.out.println("Next movie");
   }
 
-````
+```
 
 <h4>Step 12</h4>
 Create a diver class to test the functionality of the movie player.
@@ -232,10 +232,58 @@ MultimediaControl mc1 = new  AudioPlayer();
     mc2.previous();
     mc2.stop();
     
-    ````
+````
 
 <h4>Step 14 - 16</h4>
-Because of similiar funcyion we decided t pcik nim fr.st
+Because of similiar function between 3 steps, thy were merged together to one step.
+Step 14: Add functionality to your classes that would allow them to be sorted by name with the Collections.sort
+method
+Step 15: You should also demonstrate the Collections.sort method
+Step 16: Create a method called print that would take your collection and list all of the contents. It should handle
+all of your classes
+
+First to able to be sort by name, the Class Product imeplemented Comparable, and inherited it's method: comparto.
+
+```
+Public abstract class Product implements Item,Comparable {
+    public int compareTo(Object o) {
+  
+    return name.compareTo(((Product) o).getName());
+  }
+
+}
+```
+Performing this allows for Collections.sort to be able to sort Product objects.
+
+Then a sample list of products was created: 
+```
+ArrayList<Product> products = new ArrayList<>();
+    AudioPlayer a1 = new AudioPlayer("iPod Mini", "MP3");
+    AudioPlayer a2 = new AudioPlayer("Walkman ", "WAV");
+    MoviePlayer m1 = new MoviePlayer("DBPOWER MK101", new Screen("720x480",40,22),MonitorType.LCD);
+    MoviePlayer m2 = new MoviePlayer("Pyle PdV156BK", new Screen("1366x768",40,22),MonitorType.LED);
+```
+The products are varied from audio player and movie player, now with Collection.Sort is used on the productList it will sort by the name variable.
+
+``` Collections.sort(products; ```
+
+Lastly a print method to display the results.
+
+
+``` public static  <T> void print(List<T> products){
+
+    /**
+     * Prints content of arraylist in the parameter.
+     * In this program it shows that the arraylist is sorted by name.
+     */
+
+    for (T t :products) {
+      System.out.println(t.toString());
+    }
+  }
+  ```
+This is a generic method, so any arrayList of any object can be passed as an argument. But for this program it simply displays all the objects toString in the list.
+
 <h3> Summary </h3>
 
 * There exists a Main class, a Widget class, Product class, and Item interface.
