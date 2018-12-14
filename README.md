@@ -13,18 +13,23 @@
 create a production line for multimedia devices which include music and movie players.
 Design a template in Java for creating and recording all future production line items.  
 For this particular production facility you will only implement a concrete class for music and movie players.</p>
+
+## Table of Contents
+- [Step 1](#Step-1)
+- [Step 2](#Step-2)
+
 <h4>Step 1</h4>
 <p>Create a Item inteface with the following methods
 
-  void setProductionNumber(int parameter);
+* void setProductionNumber(int parameter);
 
-  void setName(String name);
+* void setName(String name);
 
-  String getName();
+* String getName();
 
-  Date getManufactureDate();
+* Date getManufactureDate();
 
-  int getSerialNumber();</p></p>
+* int getSerialNumber();</p></p>
   <h4>Step 2</h4>
 Create ItemType Enum with a type: (type,code)
 
@@ -54,7 +59,7 @@ Visual | VI
 
 The classes that implement this interface, will have inherit these methods and define their own function for it.
 
-<h4>Step 5<h4>
+<h4>Step 5</h4>
 <p> We require a concrete class that will allow us to capture the details of an audio player. Create a class
  called AudioPlayer that is a subclass of Product and implements the MultimediaControl interface.</p>
  
@@ -85,7 +90,7 @@ The classes that implement this interface, will have inherit these methods and d
 }
 ```
 
-<h4>Step 6<h4>
+<h4>Step 6</h4>
 Create a class called AudioPlayer Driver to test the Audo player class, it will print to screen from the methods of AudioPlayer
 
 ```
@@ -102,7 +107,7 @@ public class AudioPlayerDriver{
     System.out.println(ap2.toString());
   }
 }
-````]
+```
 
 <h4>Step 7</h4>
 The production facility will also create portable movie players. The main difference between these and
@@ -150,7 +155,7 @@ Screen inherits the methods from ScreenSepc and fills the defintion of methods.
 
 
 <h4>Step 10</h4>
-Was to create a driver class to test Screen class, but since screen objects are created when MoviePlayers are.
+Thos step instruction Was to create a driver class to test Screen class, but since screen objects are created when MoviePlayers are.
 This step was combined into Step 12
 <h4>Step 11</h4>
 Create a class called MoviePlayer that extends Product and implements MultimediaControl.
@@ -212,7 +217,7 @@ public class MoviePlayerDriver{
     System.out.println(mp2.toString());
   }
 }
-````
+```
 
 <h4>Step 13</h4>
 Create a driver class that will demonstrate that any class that implements the MultimediaControl Interface would be able to be
@@ -291,27 +296,37 @@ This is a generic method, so any arrayList of any object can be passed as an arg
 * Widget class, extends Product and will intialize it when in Main method
 * Product class is an abstract class that implements Item's methods, and provides methods for Widget
 * Item interface creates classes for Product to implement. Also contain ItemType Enum with fields.
+* A AudiPplayer Class that extendw Product and MultimediaControl interface.
+* A MoviePlayer Class that extendw Product and MultimediaControl interface.
+* Since Product is abstract class, no objecs can be made from it, we the programs makes objects of AudioPlayer and MoviePlayers.
+* A Screen class that implements ScreenSpec interface.
 
 When user runs Main(), it will display:
+A list of product's toString, sorted by name regardless of whether it was a AudioPlayer or MoviePlayer.
 
-* Manufacturer
-* Serial Number
-* Date created
-* Name of product
 
-Next then it will display ItemType's fields.
-
-Tested on Windows 10, IntelJ IDEA 32-bit on 10/28/18.
+Tested on Windows 10, IntelJ IDEA 32-bit on 12/01/2018
 
 </p>
 
 <h3>Techniques
  <p>Program demostrates <hr> 
- **Polymorphism**: is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
+ **Polymorphism** : is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
 
 Any Java object that can pass more than one IS-A test is considered to be polymorphic. In Java, all Java objects are polymorphic since any object will pass the IS-A test for their own type and for the class Object.
 
-In this project, Chasis is a child class of __
+**Interfaces** : An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface. Inteface methods and fields must be public, and the methods code blocks must be blakn. 
+
+**Overriding ** : a feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes. When the method is called from another object, the subclasses's overriden mehtod is called instead of the superclass's overidden method.
+
+<h3>Credits</h4>
+<hr>
+JP Project is a scenario created by Oracle Academy for the purpose of teaching Java.
+ 
+This program is authored by Philemon Petit-Frere.
+
+
+
 
 
 
