@@ -29,6 +29,7 @@ For this particular production facility, you will only implement a concrete clas
 - [Step 12](#Step-12)
 - [Step 13](#Step-13)
 - [Step 14](#step-14---16)
+- [Techniques](#Techniques)
 - [Credits](#Credits)
 
 <h4>Step 1</h4>
