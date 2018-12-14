@@ -109,10 +109,10 @@ The production facility will also create portable movie players. The main differ
 the audio players is that they contain screens.
  
  Create a monitor Type enum that will store:
-|Type|
-_____
-|LCD|
-|LED|
+ 
+* Tye
+*LCD
+*LED|
 
 <h4>Step 8</h4>
 Create an interface called ScreenSpec. This will define 3 methods:
@@ -234,9 +234,8 @@ MultimediaControl mc1 = new  AudioPlayer();
     
     ````
 
-<h4>Step 14</h4>
-<h4>Step 15</h4>
-<h4>Step 16</h4>
+<h4>Step 14 - 16</h4>
+Because of similiar funcyion we decided t pcik nim fr.st
 <h3> Summary </h3>
 
 * There exists a Main class, a Widget class, Product class, and Item interface.
